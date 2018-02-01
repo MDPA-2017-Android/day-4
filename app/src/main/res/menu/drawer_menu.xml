@@ -3,29 +3,14 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_first_fragment"
-            android:icon="@drawable/ic_one"
-            android:title="First" />
+            android:id="@+id/nav_movies"
+            android:icon="@drawable/ic_movie"
+            android:title="Movies"
+            android:checked="true"/>
         <item
-            android:id="@+id/nav_second_fragment"
-            android:icon="@drawable/ic_two"
-            android:title="Second" />
-        <item
-            android:id="@+id/nav_third_fragment"
-            android:icon="@drawable/ic_three"
-            android:title="Third" />
+            android:id="@+id/nav_tv_show"
+            android:icon="@drawable/ic_tv_show"
+            android:title="Tv Shows" />
     </group>
 
-    <item android:title="Sub items">
-        <menu>
-            <group android:checkableBehavior="single">
-                <item
-                    android:icon="@drawable/ic_dashboard"
-                    android:title="Sub item 1" />
-                <item
-                    android:icon="@drawable/ic_forum"
-                    android:title="Sub item 2" />
-            </group>
-        </menu>
-    </item>
 </menu>
