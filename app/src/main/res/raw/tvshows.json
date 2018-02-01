@@ -1,0 +1,11 @@
+[
+{ "title": "Sons of Anarchy", "ended": true, "seasons": 7},
+{ "title": "Breaking Bad", "ended": true, "seasons": 5},
+{ "title": "Dexter", "ended": true, "seasons": 8},
+{ "title": "Luther", "ended": false, "seasons": 4},
+{ "title": "Game of Thrones", "ended": false, "seasons": 7},
+{ "title": "Lie to Me", "ended": true, "seasons": 3},
+{ "title": "Big bang theory", "ended": false, "seasons": 11},
+{ "title": "Modern Family", "ended": false, "seasons": 9},
+{ "title": "The Man in the High Castle", "ended": false, "seasons": 2}
+]
