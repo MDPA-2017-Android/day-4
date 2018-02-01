@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = (NavigationView) findViewById(R.id.navigation_view);
         navigationView.setNavigationItemSelectedListener(this);
     }
 
@@ -90,6 +90,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        switch(item.getItemId())
+        {
+            case R.id.nav_first_fragment:
+                View rootView = findViewById(android.R.id.content);
+                Snackbar.make(rootView, R.string.snackbar_text, Snackbar.LENGTH_INDEFINITE).show();
+                break;
+        }
+
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
