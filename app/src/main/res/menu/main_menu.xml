@@ -4,7 +4,8 @@
         android:id="@+id/mi_add"
         android:icon="@drawable/ic_action_name"
         app:showAsAction="ifRoom"
-        android:title="Compose">
+        android:title="Compose"
+        android:onClick="onAddButtonClicked">
     </item>
     <!--
     <item

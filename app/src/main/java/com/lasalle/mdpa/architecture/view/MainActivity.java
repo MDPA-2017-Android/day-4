@@ -46,13 +46,8 @@ public class MainActivity extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch(item.getItemId()) {
-            case R.id.mi_add:
-                Toast.makeText(this, "Option not available yet", Toast.LENGTH_LONG).show();
-                break;
-        }
-        return super.onOptionsItemSelected(item);
+    public void onAddButtonClicked(MenuItem item) {
+        Toast.makeText(this, "Option not available yet", Toast.LENGTH_LONG).show();
     }
+
 }
