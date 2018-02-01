@@ -49,9 +49,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onAddButtonClicked(MenuItem item) {
-        //Toast.makeText(this, "Option not available yet", Toast.LENGTH_LONG).show();
         View rootView = findViewById(android.R.id.content);
-        Snackbar.make(rootView, R.string.snackbar_text, Snackbar.LENGTH_LONG).show();
+        Snackbar.make(rootView, R.string.snackbar_text, Snackbar.LENGTH_INDEFINITE)
+                .setAction(R.string.snackbar_action, new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Toast.makeText(view.getContext(), "Still not available", Toast.LENGTH_LONG).show();
+                    }
+                })
+                .show();
     }
+
 
 }
