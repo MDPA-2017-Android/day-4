@@ -5,11 +5,9 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
-import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
-import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -21,8 +19,6 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.lasalle.mdpa.architecture.R;
-import com.lasalle.mdpa.architecture.model.TvShow;
-import com.lasalle.mdpa.architecture.view.adapter.TabAdapter;
 import com.lasalle.mdpa.architecture.view.model.LibraryViewModel;
 
 
@@ -51,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         NavigationView navigationView = (NavigationView) findViewById(R.id.navigation_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        initFragmentManager();
+        initFragmentContainer();
     }
 
     @Override
@@ -108,9 +104,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return true;
     }
 
-    private void initFragmentManager() {
+    private void initFragmentContainer() {
         FragmentManager fragmentManager = getSupportFragmentManager();
         MoviesFragment fragment = MoviesFragment.newInstance();
-        fragmentManager.beginTransaction().replace(R.id.fragment_container, fragment).commit();
+        fragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, fragment)
+                .commit();
     }
 }
