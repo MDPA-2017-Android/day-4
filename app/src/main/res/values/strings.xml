@@ -3,4 +3,6 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="snackbar_text">Option not available yet</string>
     <string name="snackbar_action">Click me!!</string>
+    <string name="navigation_drawer_open">Open Navigation Drawer</string>
+    <string name="navigation_drawer_close">Close Navigation Drawer</string>
 </resources>
