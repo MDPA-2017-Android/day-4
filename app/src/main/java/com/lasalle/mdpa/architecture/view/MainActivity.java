@@ -2,6 +2,8 @@ package com.lasalle.mdpa.architecture.view;
 
 import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.GravityCompat;
@@ -21,7 +23,7 @@ import com.lasalle.mdpa.architecture.view.adapter.TabAdapter;
 import com.lasalle.mdpa.architecture.view.model.LibraryViewModel;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout drawerLayout;
 
@@ -51,6 +53,9 @@ public class MainActivity extends AppCompatActivity {
                 this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
     }
 
     @Override
@@ -69,6 +74,8 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+
+
     public void onAddButtonClicked(MenuItem item) {
         View rootView = findViewById(android.R.id.content);
         Snackbar.make(rootView, R.string.snackbar_text, Snackbar.LENGTH_INDEFINITE)
@@ -81,5 +88,9 @@ public class MainActivity extends AppCompatActivity {
                 .show();
     }
 
-
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        drawerLayout.closeDrawer(GravityCompat.START);
+        return true;
+    }
 }
